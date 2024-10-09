@@ -2,12 +2,12 @@ import Footer from "@/components/layout/Footer";
 import SubNavigation from "@/components/layout/SubNavigation";
 import React from "react";
 
-const Page = ({ params }) => {
+const Page = () => {
   return (
-    <div className="bg-light-green">
+    <div className="bg-dark-gray">
       <SubNavigation />
-      Design Catalog: {params.catalog}
-      <Footer textColor="black" />
+
+      <Footer textColor="light-green" />
     </div>
   );
 };
