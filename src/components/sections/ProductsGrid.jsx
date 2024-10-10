@@ -1,14 +1,7 @@
 import ProductCard from "../cards/ProductCard";
+import PropTypes from "prop-types";
 
-export default function ProductsGrid() {
-  const products = [
-    { id: 1, image: "/product-demo4.png", price: "$29.99" },
-    { id: 2, image: "/product-demo3.png", price: "$29.99" },
-    { id: 3, image: "/product-demo2.png", price: "$29.99" },
-    { id: 4, image: "/product-demo.png", price: "$29.99" },
-    { id: 5, image: "/product-demo5.png", price: "$29.99" },
-  ];
-
+const ProductsGrid = ({ products }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-scree mt-12">
       <div className="w-full max-w-6xl bg-gray-100 border-4 border-lime-400 p-6 text-center">
@@ -23,4 +16,10 @@ export default function ProductsGrid() {
       </div>
     </div>
   );
-}
+};
+
+ProductsGrid.propTypes = {
+  products: PropTypes.array.isRequired,
+};
+
+export default ProductsGrid;

@@ -15,12 +15,17 @@ module.exports = {
         "dark-green": "#011406",
         "dark-gray": "#011C10",
         black: "#000000",
+        white: "#FFFFFF",
+        "white-green": "#F8FFF8",
       },
     },
     fontFamily: {
       prestiege: ["prestige-elite-std", "Serif"],
       "base-mono": ["base-mono-wide", "sans-serif"],
       "base-mono-narrow": ["base-mono-narrow", "sans-serif"],
+    },
+    backgroundImage: {
+      "design-catalog-promotion": "url('/background-asset.png')",
     },
   },
   plugins: [],

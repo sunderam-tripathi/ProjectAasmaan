@@ -1,15 +1,29 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import SearchIcon from "@/assets/search-icon.svg";
 
-const ProductSearchBar = () => {
+const ProductSearchBar = ({
+  width = "45%",
+  alignItems = "center",
+  isThin = false,
+}) => {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="flex items-center bg-light-green rounded-full p-3 w-[45%] max-w-3xl">
+    <div
+      className={`flex flex-col justify-between ${
+        alignItems === "center" ? "items-center" : "items-start"
+      }`}
+      style={{ width: width }}
+    >
+      <div
+        className={`flex items-center bg-light-green rounded-full  w-full ${
+          isThin ? "py-1 px-3" : "py-3 px-5"
+        }`}
+      >
         <input
           type="text"
           placeholder="a monochromatic logo of a Japanese's restaurant"
-          className="bg-light-green font-prestiege text-black placeholder-black flex-grow px-3 py-2 text-sm rounded-full outline-none"
+          className="bg-light-green font-prestiege text-black placeholder-black flex-grow px-3 py-2 text-sm rounded-full outline-none tracking-tight"
         />
         <button className="p-2">
           <SearchIcon />
@@ -20,6 +34,12 @@ const ProductSearchBar = () => {
       </button>
     </div>
   );
+};
+
+ProductSearchBar.propTypes = {
+  width: PropTypes.string,
+  alignItems: PropTypes.string,
+  isThin: PropTypes.bool,
 };
 
 export default ProductSearchBar;

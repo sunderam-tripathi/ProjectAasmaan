@@ -10,7 +10,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="bg-black flex items-center justify-between px-16 pr-[1.5rem] h-[120px]">
+    <header className="bg-black flex items-center justify-between px-16 pr-[1.5rem] h-28">
       <Link href="/">
         <Image
           src={HeaderLogo}
@@ -33,7 +33,7 @@ const Header = () => {
           className={`font-base-mono text-light-green px-10 flex items-center justify-center text-sm ${
             pathname.includes("design-catalog") ? "bg-dark-gray" : ""
           }`}
-          href={"/design-catalog/all"}
+          href={"/design-catalog"}
         >
           <span className="text-center">Design Catalog</span>
         </Link>
