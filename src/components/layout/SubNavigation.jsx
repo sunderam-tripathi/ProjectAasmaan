@@ -1,16 +1,25 @@
 "use client";
 
 import React from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 const SubNavigation = () => {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const getActivePageName = () => {
     if (pathname === "/") {
       return "Home";
     } else if (pathname.includes("design-catalog")) {
-      return "Design Catalog";
+      if (searchParams.get("search")) {
+        return "Design Catalog > Search Results";
+      }
+
+      if (pathname === "/design-catalog") {
+        return "Design Catalog";
+      }
+
+      return "Design Catalog > " + pathname.split("/")[2];
     } else if (pathname === "/about") {
       return "About Us";
     }

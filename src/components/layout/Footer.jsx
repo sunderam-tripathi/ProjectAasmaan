@@ -3,7 +3,7 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-const Footer = ({ textColor }) => {
+const Footer = ({ textColor = "light-green" }) => {
   return (
     <footer className="px-4 py-4 bg-transparent">
       <div className="flex justify-between">
