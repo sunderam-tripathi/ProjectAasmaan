@@ -8,7 +8,7 @@ import PromotionSection from "@/components/sections/PromotionSection";
 import Filters from "./components/Filters";
 import VerticalFilters from "./components/VerticalFilters";
 import ProductList from "./ui/ProductList";
-
+import Header from "@/components/layout/Header";
 const verticalFilters = [
   {
     label: "Color",
@@ -143,6 +143,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="bg-dark-gray">
+      <Header />
       <SubNavigation />
       {children}
       <div className="bg-light-green">

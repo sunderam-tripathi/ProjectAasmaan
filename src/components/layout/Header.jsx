@@ -10,7 +10,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="bg-black flex items-center justify-between px-16 pr-[1.5rem] h-28">
+    <header className="bg-black flex items-center justify-between px-16 pr-[1.5rem] h-28 z-50">
       <Link href="/">
         <Image
           src={HeaderLogo}
@@ -20,7 +20,7 @@ const Header = () => {
         />
       </Link>
 
-      <nav className="inline-flex gap-x-5 align-middle h-[100%]">
+      <nav className="inline-flex align-middle h-[100%]">
         <Link
           className={`font-base-mono text-light-green px-10 flex items-center justify-center text-sm ${
             pathname === "/" ? "bg-dark-gray" : ""
@@ -45,7 +45,7 @@ const Header = () => {
         </Link>
         <Link
           className={`font-base-mono text-light-green px-10 flex items-center justify-center text-sm ${
-            pathname === "/about" ? "bg-dark-gray" : ""
+            pathname === "/about" ? "bg-transparent" : ""
           }`}
           href={"/about"}
         >

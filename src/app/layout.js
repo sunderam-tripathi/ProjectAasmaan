@@ -1,5 +1,3 @@
-import Header from "@/components/layout/Header";
-
 import "./globals.css";
 
 export const metadata = {
@@ -15,10 +13,7 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className="bg-dark-green px-28">
-        <main>
-          <Header />
-          {children}
-        </main>
+        <main className="relative">{children}</main>
       </body>
     </html>
   );
