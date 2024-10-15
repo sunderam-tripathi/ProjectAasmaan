@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://use.typekit.net/tep1yqt.css" />
       </head>
 
-      <body className="bg-dark-green px-28">
+      <body className="bg-dark-green px-28 scroll-smooth">
         <main className="relative">{children}</main>
       </body>
     </html>

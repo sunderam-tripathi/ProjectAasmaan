@@ -1,9 +1,11 @@
 import React from "react";
 
+import FeatureProduct from "@/components/sections/FeatureProduct";
+
 const Page = ({ params }) => {
   return (
     <div>
-      Product: {params.catalog} / {params.product}
+      <FeatureProduct />
     </div>
   );
 };

@@ -10,7 +10,11 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="bg-black flex items-center justify-between px-16 pr-[1.5rem] h-28 z-50">
+    <header
+      className={`flex items-center justify-between px-16 pr-[1.5rem] h-28 z-50 ${
+        pathname === "/about" ? "bg-transparent" : "bg-black"
+      }`}
+    >
       <Link href="/">
         <Image
           src={HeaderLogo}
@@ -45,7 +49,7 @@ const Header = () => {
         </Link>
         <Link
           className={`font-base-mono text-light-green px-10 flex items-center justify-center text-sm ${
-            pathname === "/about" ? "bg-transparent" : ""
+            pathname === "/about" ? "bg-transparent underline" : ""
           }`}
           href={"/about"}
         >

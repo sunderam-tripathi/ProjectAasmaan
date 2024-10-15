@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams, useParams } from "next/navigation";
 
 const SubNavigation = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const { product } = useParams();
 
   const getActivePageName = () => {
     if (pathname === "/") {
@@ -19,7 +20,7 @@ const SubNavigation = () => {
         return "Design Catalog";
       }
 
-      return "Design Catalog > " + pathname.split("/")[2];
+      return "Design Catalog > " + pathname.split("/").slice(-2).join(" > ");
     } else if (pathname === "/about") {
       return "About Us";
     }
@@ -28,14 +29,18 @@ const SubNavigation = () => {
   };
 
   return (
-    <nav className="bg-transparent px-16 py-4">
-      <ul className="flex justify-between">
-        <li className="text-light-green font-base-mono capitalize text-sm">
+    <nav
+      className={`px-16 py-4 ${product ? "bg-white-green" : "bg-transparent"}`}
+    >
+      <ul
+        className={`flex justify-between ${
+          product ? "text-dark-gray" : "text-light-green"
+        }`}
+      >
+        <li className="font-base-mono capitalize text-sm">
           {getActivePageName()}
         </li>
-        <li className="text-light-green font-base-mono capitalize text-sm">
-          Cart
-        </li>
+        <li className="font-base-mono capitalize text-sm">Cart</li>
       </ul>
     </nav>
   );

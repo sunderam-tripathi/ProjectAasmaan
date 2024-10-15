@@ -6,7 +6,7 @@ import AboutImage from "@/assets/asset-image-about-us.png";
 const DigitalAdvisory = () => {
   return (
     <div className="bg-black">
-      <div className="container px-16 py-16">
+      <div className="container px-16 py-16 pb-0">
         <h1 className="text-light-green text-5xl text-center font-bold font-base-mono mb-12">
           Digital Support & Advisory @{" "}
           <span className="underline">anansol.com</span>
