@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
@@ -16,9 +17,12 @@ const HeroSection = () => {
           (Less than a year old)
         </h3>
 
-        <button className="bg-light-green text-dark-gray px-6 py-3 rounded-full mt-12 font-base-mono text-sm">
+        <Link
+          href="#book-appointment"
+          className="bg-light-green text-dark-gray px-6 py-3 rounded-full mt-12 font-base-mono text-sm"
+        >
           Set up an Appointment
-        </button>
+        </Link>
       </div>
     </div>
   );

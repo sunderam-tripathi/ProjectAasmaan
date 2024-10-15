@@ -9,6 +9,8 @@ import Filters from "./components/Filters";
 import VerticalFilters from "./components/VerticalFilters";
 import ProductList from "./ui/ProductList";
 import Header from "@/components/layout/Header";
+import { useParams } from "next/navigation";
+
 const verticalFilters = [
   {
     label: "Color",
@@ -110,29 +112,131 @@ const horizontalFilters = [
 ];
 
 const products = [
-  { id: 1, image: "/product-demo4.png", price: "$29.99" },
-  { id: 2, image: "/product-demo3.png", price: "$29.99" },
-  { id: 3, image: "/product-demo2.png", price: "$29.99" },
-  { id: 4, image: "/product-demo.png", price: "$29.99" },
-  { id: 5, image: "/product-demo4.png", price: "$29.99" },
-  { id: 6, image: "/product-demo3.png", price: "$29.99" },
-  { id: 7, image: "/product-demo2.png", price: "$29.99" },
-  { id: 8, image: "/product-demo.png", price: "$29.99" },
-  { id: 9, image: "/product-demo4.png", price: "$29.99" },
-  { id: 10, image: "/product-demo3.png", price: "$29.99" },
-  { id: 11, image: "/product-demo2.png", price: "$29.99" },
-  { id: 12, image: "/product-demo.png", price: "$29.99" },
-  { id: 13, image: "/product-demo4.png", price: "$29.99" },
-  { id: 14, image: "/product-demo3.png", price: "$29.99" },
-  { id: 15, image: "/product-demo2.png", price: "$29.99" },
-  { id: 16, image: "/product-demo.png", price: "$29.99" },
-  { id: 17, image: "/product-demo4.png", price: "$29.99" },
-  { id: 18, image: "/product-demo3.png", price: "$29.99" },
-  { id: 19, image: "/product-demo2.png", price: "$29.99" },
-  { id: 20, image: "/product-demo.png", price: "$29.99" },
+  {
+    id: 1,
+    image: "/product-demo4.png",
+    price: "$29.99",
+    link: "/design-catalog/product/1",
+  },
+  {
+    id: 2,
+    image: "/product-demo3.png",
+    price: "$29.99",
+    link: "/design-catalog/product/2",
+  },
+  {
+    id: 3,
+    image: "/product-demo2.png",
+    price: "$29.99",
+    link: "/design-catalog/product/3",
+  },
+  {
+    id: 4,
+    image: "/product-demo.png",
+    price: "$29.99",
+    link: "/design-catalog/product/4",
+  },
+  {
+    id: 5,
+    image: "/product-demo5.png",
+    price: "$29.99",
+    link: "/design-catalog/product/5",
+  },
+  {
+    id: 6,
+    image: "/product-demo3.png",
+    price: "$29.99",
+    link: "/design-catalog/product/6",
+  },
+  {
+    id: 7,
+    image: "/product-demo2.png",
+    price: "$29.99",
+    link: "/design-catalog/product/7",
+  },
+  {
+    id: 8,
+    image: "/product-demo.png",
+    price: "$29.99",
+    link: "/design-catalog/product/8",
+  },
+  {
+    id: 9,
+    image: "/product-demo4.png",
+    price: "$29.99",
+    link: "/design-catalog/product/9",
+  },
+  {
+    id: 10,
+    image: "/product-demo3.png",
+    price: "$29.99",
+    link: "/design-catalog/product/10",
+  },
+  {
+    id: 11,
+    image: "/product-demo2.png",
+    price: "$29.99",
+    link: "/design-catalog/product/11",
+  },
+  {
+    id: 12,
+    image: "/product-demo.png",
+    price: "$29.99",
+    link: "/design-catalog/product/12",
+  },
+  {
+    id: 13,
+    image: "/product-demo4.png",
+    price: "$29.99",
+    link: "/design-catalog/product/13",
+  },
+  {
+    id: 14,
+    image: "/product-demo3.png",
+    price: "$29.99",
+    link: "/design-catalog/product/14",
+  },
+  {
+    id: 15,
+    image: "/product-demo2.png",
+    price: "$29.99",
+    link: "/design-catalog/product/15",
+  },
+  {
+    id: 16,
+    image: "/product-demo.png",
+    price: "$29.99",
+    link: "/design-catalog/product/16",
+  },
+  {
+    id: 17,
+    image: "/product-demo4.png",
+    price: "$29.99",
+    link: "/design-catalog/product/17",
+  },
+  {
+    id: 18,
+    image: "/product-demo3.png",
+    price: "$29.99",
+    link: "/design-catalog/product/18",
+  },
+  {
+    id: 19,
+    image: "/product-demo2.png",
+    price: "$29.99",
+    link: "/design-catalog/product/19",
+  },
+  {
+    id: 20,
+    image: "/product-demo.png",
+    price: "$29.99",
+    link: "/design-catalog/product/20",
+  },
 ];
 
 const Layout = ({ children }) => {
+  const { product } = useParams();
+
   const handleChange = (e) => {
     console.log(e.target.value);
   };
@@ -146,34 +250,36 @@ const Layout = ({ children }) => {
       <Header />
       <SubNavigation />
       {children}
-      <div className="bg-light-green">
-        <PromotionSection
-          textColor="dark-gray"
-          buttonText="Learn More"
-          buttonColor="dark-gray"
-          buttonTextColor="light-green"
-        />
+      {!product && (
+        <div className="bg-light-green">
+          <PromotionSection
+            textColor="dark-gray"
+            buttonText="Learn More"
+            buttonColor="dark-gray"
+            buttonTextColor="light-green"
+          />
 
-        <div className="mx-4 flex bg-white-green">
-          <div className="flex-[0.4]  border-r-light-green border-r-2">
-            <Filters
-              filters={verticalFilters}
-              handleChange={handleChange}
-              handleClear={handleClear}
-            />
+          <div className="mx-4 flex bg-white-green">
+            <div className="flex-[0.4]  border-r-light-green border-r-2">
+              <Filters
+                filters={verticalFilters}
+                handleChange={handleChange}
+                handleClear={handleClear}
+              />
+            </div>
+            <div className="flex-1">
+              <VerticalFilters
+                filters={horizontalFilters}
+                handleChange={handleChange}
+                handleClear={handleClear}
+              />
+              <ProductList products={products} />
+            </div>
           </div>
-          <div className="flex-1">
-            <VerticalFilters
-              filters={horizontalFilters}
-              handleChange={handleChange}
-              handleClear={handleClear}
-            />
-            <ProductList products={products} />
-          </div>
+
+          <Footer textColor="dark-gray" />
         </div>
-
-        <Footer textColor="dark-gray" />
-      </div>
+      )}
     </div>
   );
 };

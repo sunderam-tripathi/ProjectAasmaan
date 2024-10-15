@@ -18,7 +18,7 @@ const BookAppointment = () => {
   ];
 
   return (
-    <div className="px-16 py-12 font-base-mono">
+    <div className="px-20 py-12 font-base-mono" id="book-appointment">
       <div className="bg-white text-black flex flex-col">
         {/* Header */}
         <div className="bg-light-green px-4 py-3 flex justify-between items-center font-base-mono tracking-tight">
@@ -82,7 +82,7 @@ const BookAppointment = () => {
               />
             </div>
             {/* Time Slots */}
-            <div className="grid grid-cols-3 gap-8 mb-6 text-center mt-12">
+            <div className="flex flex-wrap gap-20 mb-6 text-center justify-center mt-12 px-8">
               {timeSlots.map((slot, index) => (
                 <button
                   key={index}
@@ -97,6 +97,7 @@ const BookAppointment = () => {
                 </button>
               ))}
             </div>
+
             {/* Availability Legend */}
             <div className="flex items-center space-x-4 mb-6 text-base justify-around mt-16">
               <div className="flex items-center space-x-3">
@@ -126,8 +127,8 @@ const BookAppointment = () => {
           </div>
 
           {/* Right Section: Calendar */}
-          <div className="w-1/3 bg-gray-50 p-6">
-            <div className="flex justify-between mb-4">
+          <div className="w-1/3 bg-gray-50 p-6 py-16">
+            <div className="flex justify-between px-8 py-0">
               <button className="text-xl">&lt;</button>
               <div className="text-center">
                 <p>September, 2023</p>
@@ -135,7 +136,7 @@ const BookAppointment = () => {
               <button className="text-xl">&gt;</button>
             </div>
             {/* Calendar Grid */}
-            <div className="px-12 py-8">
+            <div className="px-8 py-8">
               <div className="grid grid-cols-7 gap-2">
                 {["S", "M", "T", "W", "T", "F", "S"].map((day, index) => (
                   <div key={index} className="text-center font-bold">
@@ -145,7 +146,7 @@ const BookAppointment = () => {
                 {[...Array(30)].map((_, index) => (
                   <div
                     key={index}
-                    className={`text-center border p-2 rounded ${
+                    className={`text-center border ${
                       index + 1 === 8 ? "bg-light-green" : ""
                     }`}
                   >

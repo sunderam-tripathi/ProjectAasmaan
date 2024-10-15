@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 const ProductsGrid = ({ products }) => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-scree mt-12">
-      <div className="w-full max-w-6xl bg-gray-100 border-4 border-lime-400 p-6 text-center">
+    <div className="flex flex-col items-center justify-center mt-12">
+      <div className="w-full max-w-6xl bg-white-green border-4 border-lime-400 p-6 text-center">
         <h2 className="text-black text-base mb-5 font-prestiege">
           a monochromatic logo of a Japanese&apos;s restaurant
         </h2>
