@@ -17,6 +17,7 @@ module.exports = {
         black: "#000000",
         white: "#FFFFFF",
         "white-green": "#F8FFF8",
+        gray: "#949292",
       },
     },
     fontFamily: {
@@ -26,6 +27,7 @@ module.exports = {
     },
     backgroundImage: {
       "design-catalog-promotion": "url('/background-asset.png')",
+      "hero-section": "url('/background_for_about_page.png')",
     },
   },
   plugins: [],

@@ -1,5 +1,6 @@
 import ProductSearchBar from "@/components/forms/ProductSearchBar";
 import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 import SubNavigation from "@/components/layout/SubNavigation";
 import ProductsGrid from "@/components/sections/ProductsGrid";
 import PromotionSection from "@/components/sections/PromotionSection";
@@ -16,6 +17,7 @@ export default function Home() {
 
   return (
     <div className="bg-dark-gray">
+      <Header />
       <SubNavigation />
       <div className="flex flex-col items-center justify-center xl:mt-10">
         <ProductSearchBar />
