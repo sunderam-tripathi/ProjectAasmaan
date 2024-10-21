@@ -1,9 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { usePathname, useSearchParams, useParams } from "next/navigation";
 
+import Cart from "../Modal/Cart";
+
 const SubNavigation = () => {
+  const [cartOpen, setCartOpen] = useState(false);
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { product } = useParams();
@@ -40,8 +43,14 @@ const SubNavigation = () => {
         <li className="font-base-mono capitalize text-sm">
           {getActivePageName()}
         </li>
-        <li className="font-base-mono capitalize text-sm">Cart</li>
+        <li
+          className="font-base-mono capitalize text-sm"
+          onClick={() => setCartOpen(true)}
+        >
+          Cart
+        </li>
       </ul>
+      <Cart open={cartOpen} setOpen={setCartOpen} />
     </nav>
   );
 };
