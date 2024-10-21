@@ -259,7 +259,7 @@ const Layout = ({ children }) => {
             buttonTextColor="light-green"
           />
 
-          <div className="mx-4 flex bg-white-green">
+          <div className="mx-4 flex-col lg:flex-row flex bg-white-green">
             <div className="flex-[0.4]  border-r-light-green border-r-2">
               <Filters
                 filters={verticalFilters}

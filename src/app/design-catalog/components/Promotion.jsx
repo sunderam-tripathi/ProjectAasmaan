@@ -3,7 +3,7 @@ import React from "react";
 
 const Promotion = () => {
   return (
-    <div className="w-1/2 p-10 flex flex-col items-center justify-center bg-design-catalog-promotion relative bg-left-top bg-cover">
+    <div className="lg:w-1/2 w-full p-10 flex flex-col items-center justify-center bg-design-catalog-promotion relative bg-left-top bg-cover">
       <div className="absolute inset-0 bg-dark-gray bg-opacity-80 bg-blend-multiply" />
       <div className="relative flex items-center justify-center h-full">
         <div className="text-center">

@@ -33,7 +33,9 @@ const SubNavigation = () => {
 
   return (
     <nav
-      className={`px-16 py-4 ${product ? "bg-white-green" : "bg-transparent"}`}
+      className={`px-6 lg:px-16 py-4 ${
+        product ? "bg-white-green" : "bg-transparent"
+      }`}
     >
       <ul
         className={`flex justify-between ${

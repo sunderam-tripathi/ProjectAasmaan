@@ -6,7 +6,7 @@ import FilterInput from "@/components/forms/FilterInput";
 
 const Filters = ({ filters, handleChange, handleClear }) => {
   return (
-    <div className="px-6 py-10">
+    <div className="px-6 py-6 lg:py-10">
       <div className="flex flex-col gap-4">
         <h2 className="text-dark-gray text-base font-base-mono tracking-tighter">
           Filters
