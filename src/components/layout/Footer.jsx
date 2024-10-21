@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 
 const Footer = ({ textColor = "light-green" }) => {
   return (
-    <footer className="px-4 py-4 bg-transparent">
-      <div className="flex justify-between">
+    <footer className="px-0 lg:px-4 py-4 bg-transparent">
+      <div className="flex justify-between flex-col lg:flex-row text-center lg:text-left">
         <span className={`text-${textColor} font-prestiege text-sm`}>
           Copyright © 2023 Open Design Solutions - All Rights Reserved.
         </span>
