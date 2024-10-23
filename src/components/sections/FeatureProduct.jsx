@@ -6,12 +6,12 @@ import ProductImage from "@/assets/background.png";
 
 const FeatureProduct = () => {
   return (
-    <div className="w-full bg-white-green pt-5 px-16 py-16 mb-12">
-      <div className="flex gap-10 font-base-mono">
-        <div className="w-1/2 px-5">
+    <div className="w-full bg-white-green pt-5 px-1 lg:px-16 py-16 mb-12">
+      <div className="flex flex-col lg:flex-row gap-10 font-base-mono">
+        <div className="w-full lg:w-1/2 px-5">
           <Image src={ProductImage} alt="product" className="w-full" />
         </div>
-        <div className="w-1/2 p-5">
+        <div className="w-full lg:w-1/2 p-5 text-dark-gray">
           <h5 className="text-sm mb-3">
             Product ID - <span className="underline">#15523002</span>
           </h5>
@@ -24,7 +24,7 @@ const FeatureProduct = () => {
             Setup call for customization or specific requirements
           </Link>
 
-          <div className="flex gap-10 items-start justify-between mt-3">
+          <div className="flex flex-col lg:flex-row gap-6 items-start justify-between mt-3">
             <button className="px-16 py-3 bg-light-green rounded-full w-full">
               Buy this design
             </button>

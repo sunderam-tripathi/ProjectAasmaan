@@ -1,9 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { usePathname, useSearchParams, useParams } from "next/navigation";
 
+import Cart from "../Modal/Cart";
+
 const SubNavigation = () => {
+  const [cartOpen, setCartOpen] = useState(false);
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { product } = useParams();
@@ -30,18 +33,26 @@ const SubNavigation = () => {
 
   return (
     <nav
-      className={`px-16 py-4 ${product ? "bg-white-green" : "bg-transparent"}`}
+      className={`px-6 lg:px-16 py-4 ${
+        product ? "bg-white-green" : "bg-transparent"
+      }`}
     >
       <ul
-        className={`flex justify-between ${
+        className={`flex justify-between gap-6 items-center ${
           product ? "text-dark-gray" : "text-light-green"
         }`}
       >
         <li className="font-base-mono capitalize text-sm">
           {getActivePageName()}
         </li>
-        <li className="font-base-mono capitalize text-sm">Cart</li>
+        <li
+          className="font-base-mono capitalize text-sm"
+          onClick={() => setCartOpen(true)}
+        >
+          Cart
+        </li>
       </ul>
+      <Cart open={cartOpen} setOpen={setCartOpen} />
     </nav>
   );
 };

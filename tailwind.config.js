@@ -4,6 +4,7 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     extend: {
@@ -30,5 +31,5 @@ module.exports = {
       "hero-section": "url('/background_for_about_page.png')",
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };

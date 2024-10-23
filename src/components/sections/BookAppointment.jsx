@@ -18,16 +18,19 @@ const BookAppointment = () => {
   ];
 
   return (
-    <div className="px-20 py-12 font-base-mono" id="book-appointment">
+    <div
+      className="px-1 lg:px-20 py-1 lg:py-12 font-base-mono"
+      id="book-appointment"
+    >
       <div className="bg-white text-black flex flex-col">
         {/* Header */}
-        <div className="bg-light-green px-4 py-3 flex justify-between items-center font-base-mono tracking-tight">
-          <div>
+        <div className="bg-light-green gap-3 lg:gap-0 px-4 py-3 flex flex-col lg:flex-row justify-between items-center font-base-mono tracking-tight">
+          <div className="flex-mob">
             <h1 className="text-base font-bold">September 8, 2023</h1>
             <p className="text-sm font-semibold">Friday</p>
           </div>
-          <div className="flex space-x-4">
-            <button className="bg-black text-white px-4 py-3 text-sm flex items-center space-x-4">
+          <div className="lg:flex  grid grid-cols-2 lg:flex-row gap-3 lg:gap-0 space-x-4">
+            <button className="bg-black text-white place-self-center px-4 py-3 text-sm flex items-center space-x-4">
               <LeftArrow />
               <span>Today</span>
               <RightArrow />
@@ -41,17 +44,20 @@ const BookAppointment = () => {
               ]}
             />
 
-            <button className="bg-black text-white px-4 py-3 text-sm rounded-full">
+            <button className="bg-black hidden lg:block text-white px-4 py-3 text-sm rounded-full">
               Set up a meeting
             </button>
           </div>
+          <button className="bg-black lg:hidden text-white px-4 py-3 text-sm rounded-full">
+            Set up a meeting
+          </button>
         </div>
 
-        <div className="flex flex-grow">
+        <div className="flex flex-col lg:flex-row flex-grow">
           {/* Left Section: Appointment and Time Slots */}
-          <div className="w-2/3 bg-white-green p-6">
+          <div className="w-full lg:w-2/3 bg-white-green p-6">
             {/* Appointment Type */}
-            <div className="mb-4 font-base-mono space-x-4">
+            <div className="mb-4 flex lg:block flex-col gap-4 font-base-mono space-x-4">
               <Select
                 name="appointment-type"
                 className="text-light-green bg-black"
@@ -82,7 +88,7 @@ const BookAppointment = () => {
               />
             </div>
             {/* Time Slots */}
-            <div className="flex flex-wrap gap-20 mb-6 text-center justify-center mt-12 px-8">
+            <div className="flex flex-wrap gap-4 lg:gap-20 mb-6 text-center justify-center mt-12 px-0 lg:px-8">
               {timeSlots.map((slot, index) => (
                 <button
                   key={index}
@@ -127,7 +133,7 @@ const BookAppointment = () => {
           </div>
 
           {/* Right Section: Calendar */}
-          <div className="w-1/3 bg-gray-50 p-6 py-16">
+          <div className="w-full lg:w-1/3 bg-gray-50 p-6 py-16">
             <div className="flex justify-between px-8 py-0">
               <button className="text-xl">&lt;</button>
               <div className="text-center">
