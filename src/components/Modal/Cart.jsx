@@ -62,13 +62,13 @@ const Cart = ({ open, setOpen }) => {
               transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300
               data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in  data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95 min-h-screen"
           >
-            <div className="flex">
-              <div className="flex flex-col min-h-screen w-1/2 gap-4 bg-white-green text-dark-gray">
+            <div className="flex flex-col lg:flex-row">
+              <div className="flex flex-col min-h-screen w-full lg:w-1/2 gap-4 bg-white-green text-dark-gray">
                 <div className="flex flex-col p-5">
                   <h1 className="text-2xl font-bold font-base-mono">Cart</h1>
                 </div>
 
-                <div className="px-20">
+                <div className="px-5 lg:px-20">
                   <div className="text-left flex flex-col font-base-mono w-52">
                     <h5 className="text-base font-bold">Amount: $89.99</h5>
                     <h6 className="text-base font-bold border-light-green border-b-2">
@@ -86,7 +86,7 @@ const Cart = ({ open, setOpen }) => {
                   >
                     {products.map((product) => (
                       <div className="flex gap-5 items-center" key={product.id}>
-                        <div className="w-1/4 flex flex-col items-center justify-center">
+                        <div className="w-3/5 lg:w-1/4 flex flex-col items-center justify-center">
                           <Image
                             src={product.image}
                             alt={product.id}
@@ -118,8 +118,8 @@ const Cart = ({ open, setOpen }) => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col min-h-screen w-1/2 bg-light-green text-dark-gray  p-20">
-                <h2 className="text-2xl font-bold font-base-mono text-right mb-5">
+              <div className="flex flex-col mt-5 lg:mt-0 min-h-screen w-full lg:w-1/2 bg-light-green text-dark-gray  p-5 lg:p-20">
+                <h2 className="text-2xl font-bold font-base-mono text-left lg:text-right mb-5">
                   Payment
                 </h2>
 
@@ -168,7 +168,7 @@ const Cart = ({ open, setOpen }) => {
                         <input
                           type="text"
                           id="city"
-                          className="bg-white-green p-2"
+                          className="bg-white-green w-full p-2"
                         />
                       </div>
                     </div>
@@ -189,7 +189,7 @@ const Cart = ({ open, setOpen }) => {
                         Payment Methods
                       </legend>
 
-                      <div className="flex gap-20">
+                      <div className="flex gap-5 lg:gap-20">
                         <div className="flex gap-2 items-center">
                           <input
                             type="radio"
@@ -255,7 +255,7 @@ const Cart = ({ open, setOpen }) => {
                         <input
                           type="text"
                           id="cvc"
-                          className="bg-white-green p-2"
+                          className="bg-white-green w-full p-2"
                         />
                       </div>
                     </div>

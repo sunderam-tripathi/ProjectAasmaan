@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
 
       <body className="bg-dark-green px-4 xl:px-28 scroll-smooth">
         <main className="relative">{children}</main>
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
       </body>
     </html>
   );
