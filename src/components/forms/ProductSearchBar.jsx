@@ -23,7 +23,7 @@ const ProductSearchBar = ({
         <input
           type="text"
           placeholder="a monochromatic logo of a Japanese's restaurant"
-          className="bg-light-green font-prestiege text-black placeholder-black flex-grow px-3 py-2 text-sm rounded-full outline-none tracking-tight"
+          className="bg-light-green font-prestiege text-black placeholder-black flex-grow px-3 py-2 border-none text-sm rounded-full outline-none tracking-tight"
         />
         <button className="p-2">
           <SearchIcon className="max-w-5 lg:max-w-8" />

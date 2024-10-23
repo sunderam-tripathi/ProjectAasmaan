@@ -35,7 +35,7 @@ const DigitalAdvisory = () => {
               their core operations with an unwavering spirit of excellence.
             </p>
 
-            <dl className="font-base-mono text-sm">
+            <dl className="font-base-mono text-sm text-light-green my-5">
               <dt className="text-light-green mt-4 mb-1">
                 * Unwavering Support:
               </dt>

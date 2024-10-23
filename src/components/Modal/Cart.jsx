@@ -51,19 +51,19 @@ const Cart = ({ open, setOpen }) => {
     <Dialog open={open} onClose={setOpen} className="relative z-10">
       <DialogBackdrop
         transition
-        className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
+        className="fixed inset-0 bg-dark-green bg-opacity-75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
       />
 
-      <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-        <div className="min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+      <div className="fixed left-[5%] top-[5%] z-10 w-[90%] overflow-y-auto h-[90%]">
+        <div className="items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <DialogPanel
             transition
             className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl
               transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300
-              data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in  data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95 min-h-screen"
+              data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in  data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
           >
             <div className="flex flex-col lg:flex-row">
-              <div className="flex flex-col min-h-screen w-full lg:w-1/2 gap-4 bg-white-green text-dark-gray">
+              <div className="flex flex-col w-full lg:w-1/2 gap-4 bg-white-green text-dark-gray">
                 <div className="flex flex-col p-5">
                   <h1 className="text-2xl font-bold font-base-mono">Cart</h1>
                 </div>
@@ -81,7 +81,7 @@ const Cart = ({ open, setOpen }) => {
                   </div>
 
                   <div
-                    className="bg-transparent border-neutral-400 border-2 h-[450px] max-h-[450px] overflow-scroll mt-5 
+                    className="bg-transparent border-neutral-400 border-2 h-[450px] max-h-[450px] overflow-y-scroll mt-5 
                     flex flex-col gap-5 p-5 scroll-p-2 scroll-light-green"
                   >
                     {products.map((product) => (
@@ -118,12 +118,12 @@ const Cart = ({ open, setOpen }) => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col mt-5 lg:mt-0 min-h-screen w-full lg:w-1/2 bg-light-green text-dark-gray  p-5 lg:p-20">
+              <div className="flex flex-col mt-5 lg:mt-0 w-full lg:w-1/2 bg-light-green text-dark-gray  p-5 lg:p-20">
                 <h2 className="text-2xl font-bold font-base-mono text-left lg:text-right mb-5">
                   Payment
                 </h2>
 
-                <div className="space-y-8 font-base-mono">
+                <div className=" font-base-mono">
                   <div className="flex flex-col">
                     <label htmlFor="email" className="text-base font-bold">
                       Email
@@ -135,7 +135,7 @@ const Cart = ({ open, setOpen }) => {
                     />
                   </div>
 
-                  <div className="flex flex-col gap-5">
+                  <div className="flex flex-col gap-4">
                     <h3 className="text-base font-bold">Billing Details</h3>
 
                     <div className="flex flex-col">
@@ -149,7 +149,7 @@ const Cart = ({ open, setOpen }) => {
                       />
                     </div>
 
-                    <div className="flex gap-5 w-full">
+                    <div className="flex gap-4 w-full">
                       <div className="flex flex-col w-2/5">
                         <label htmlFor="state" className="text-base font-bold">
                           State
@@ -184,7 +184,7 @@ const Cart = ({ open, setOpen }) => {
                       />
                     </div>
 
-                    <fieldset id="payment-methods flex flex-col gap-5">
+                    <fieldset id="payment-methods flex flex-col gap-4">
                       <legend className="text-base font-bold">
                         Payment Methods
                       </legend>
@@ -233,7 +233,7 @@ const Cart = ({ open, setOpen }) => {
                       />
                     </div>
 
-                    <div className="flex gap-5">
+                    <div className="flex gap-4">
                       <div className="flex flex-col w-3/5">
                         <label
                           htmlFor="cardNumber"
@@ -261,7 +261,7 @@ const Cart = ({ open, setOpen }) => {
                     </div>
                   </div>
 
-                  <button className="bg-dark-gray text-white-green p-2 w-48 rounded-full mx-auto">
+                  <button className="bg-dark-gray text-white-green mt-4 p-2 w-48 rounded-full mx-auto">
                     Pay
                   </button>
                 </div>

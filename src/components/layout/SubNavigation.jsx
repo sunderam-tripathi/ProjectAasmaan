@@ -38,7 +38,7 @@ const SubNavigation = () => {
       }`}
     >
       <ul
-        className={`flex justify-between ${
+        className={`flex justify-between gap-6 items-center ${
           product ? "text-dark-gray" : "text-light-green"
         }`}
       >
