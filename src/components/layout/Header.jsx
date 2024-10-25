@@ -17,6 +17,7 @@ const Header = () => {
 
   return (
     <header
+      id="header"
       className={`flex items-center justify-between px-6 lg:px-16 pr-[1.5rem] h-28 z-50 ${
         pathname === "/about" ? "bg-transparent" : "bg-black"
       }`}

@@ -23,7 +23,7 @@ const Page = () => {
       <DigitalAdvisory />
       <BookAppointment />
       <Footer textColor="light-green" />
-      <div className="fixed lg:left-32 left-7 lg:bottom-5 bottom-3">
+      <div className="fixed lg:left-32 left-7 lg:bottom-0 bottom-0">
         <DollIcon />
       </div>
     </div>

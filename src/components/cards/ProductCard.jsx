@@ -12,47 +12,50 @@ const ProductCard = ({ product }) => {
       key={product.id}
       className="flex group/item flex-col items-center text-center"
     >
-      <Link className=" hover:bg-slate-100" href={product?.link || "/"}>
-        <div className="bg-gray-200 rounded-md mb-2">
+      <Link href={product?.link || "/"}>
+        <div className="bg-gray-200 rounded-md mb-2 relative">
           <Image
             src={product.image}
             alt={`Product ${product.id}`}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="w-full h-full object-cover border-2"
+            className="w-full h-full object-cover sm:border-2 border-none"
             width={0}
             height={0}
           />
+          <div
+            className=" p-1.5 sm:p-2 flex gap-1.5 bg-dark-green/50 sm:invisible sm:absolute sm:inset-0 justify-center items-center 
+            sm:group-hover/item:bg-opacity-50 sm:group-hover/item:bg-dark-green transition-all duration-100 group-hover/item:visible"
+          >
+            <Link
+              className="p-1.5 sm:p-3 rounded-full bg-light-green  hover:bg-slate-200"
+              href="#"
+            >
+              <span>
+                <CartIcon />
+              </span>
+            </Link>
+            <Link
+              className="p-1.5 sm:p-3 rounded-full bg-light-green hover:bg-slate-200"
+              href="#"
+            >
+              <span>
+                <BagIcon />
+              </span>
+            </Link>
+            <Link
+              className="p-1.5 sm:p-3 rounded-full bg-light-green hover:bg-slate-200"
+              href="#"
+            >
+              <span>
+                <EyeIcon />
+              </span>
+            </Link>
+          </div>
         </div>
         <p className="text-black font-base-mono font-semibold text-base">
           {product.price}
         </p>
       </Link>
-      <div className="flex flex-row gap-1 absolute mt-2">
-        <a
-          className="group/edit p-1 rounded-full  bg-white-green invisible hover:bg-slate-200 group-hover/item:visible"
-          href="#"
-        >
-          <span>
-            <CartIcon />
-          </span>
-        </a>
-        <a
-          className="group/edit p-1 rounded-full  bg-white-green invisible hover:bg-slate-200 group-hover/item:visible"
-          href="#"
-        >
-          <span>
-            <BagIcon />
-          </span>
-        </a>
-        <a
-          className="group/edit  p-1 rounded-full bg-white-green invisible hover:bg-slate-200 group-hover/item:visible"
-          href="#"
-        >
-          <span>
-            <EyeIcon />
-          </span>
-        </a>
-      </div>
     </div>
   );
 };

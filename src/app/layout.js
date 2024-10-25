@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import ScrollToTop from "@/components/layout/ScrollToTop";
 export const metadata = {
   title: "Open Design Solutions",
   description: "Open Design Solutions",
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
 
       <body className="bg-dark-green px-4 xl:px-28 scroll-smooth">
         <main className="relative">{children}</main>
+        <ScrollToTop />
       </body>
     </html>
   );
