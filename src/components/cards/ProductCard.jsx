@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 import PropTypes from "prop-types";
@@ -23,7 +25,7 @@ const ProductCard = ({ product }) => {
             height={0}
           />
           <div
-            className=" p-1.5 sm:p-2 flex gap-1.5 bg-dark-green/50 sm:invisible sm:absolute sm:inset-0 justify-center items-center 
+            className=" p-1.5 sm:p-2 flex gap-1.5 bg-dark-green/80 sm:invisible sm:absolute sm:inset-0 justify-center items-center 
             sm:group-hover/item:bg-opacity-50 sm:group-hover/item:bg-dark-green transition-all duration-100 group-hover/item:visible"
           >
             <Link
