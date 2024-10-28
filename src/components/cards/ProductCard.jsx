@@ -31,7 +31,7 @@ const ProductCard = ({ product }) => {
               href="#"
             >
               <span>
-                <CartIcon />
+                <CartIcon className="stroke-dark-green" />
               </span>
             </Link>
             <Link
@@ -39,7 +39,7 @@ const ProductCard = ({ product }) => {
               href="#"
             >
               <span>
-                <BagIcon />
+                <BagIcon className="stroke-dark-green" />
               </span>
             </Link>
             <Link
@@ -47,7 +47,7 @@ const ProductCard = ({ product }) => {
               href="#"
             >
               <span>
-                <EyeIcon />
+                <EyeIcon className="stroke-dark-green" />
               </span>
             </Link>
           </div>
