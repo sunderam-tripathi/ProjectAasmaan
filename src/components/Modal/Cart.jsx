@@ -81,7 +81,7 @@ const Cart = ({ open, setOpen }) => {
                   </div>
 
                   <div
-                    className="bg-transparent border-neutral-400 border-2 h-[450px] max-h-[450px] overflow-y-scroll mt-5 
+                    className="bg-transparent border-neutral-400 border-2 lg:h-[280px] h-[450px] max-h-[450px] overflow-y-scroll mt-5 
                     flex flex-col gap-5 p-5 scroll-p-2 scroll-light-green"
                   >
                     {products.map((product) => (
@@ -118,8 +118,8 @@ const Cart = ({ open, setOpen }) => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col mt-5 lg:mt-0 w-full lg:w-1/2 bg-light-green text-dark-gray  p-5 lg:p-20">
-                <h2 className="text-2xl font-bold font-base-mono text-left lg:text-right mb-5">
+              <div className="flex flex-col  mt-5 lg:mt-0 w-full lg:w-1/2 bg-light-green text-dark-gray  p-5 lg:px-20 lg:py-4">
+                <h2 className="text-2xl font-bold font-base-mono text-left lg:text-right lg:mb-0 mb-5">
                   Payment
                 </h2>
 
@@ -135,7 +135,7 @@ const Cart = ({ open, setOpen }) => {
                     />
                   </div>
 
-                  <div className="flex flex-col gap-4">
+                  <div className="flex flex-col gap-4 lg:gap-[10px]">
                     <h3 className="text-base font-bold">Billing Details</h3>
 
                     <div className="flex flex-col">

@@ -38,3 +38,6 @@ body {
     align-items: center;
   }
 }
+select {
+  background-image: none !important;
+}

@@ -6,6 +6,8 @@ import SubNavigation from "@/components/layout/SubNavigation";
 import HeroSection from "@/components/sections/HeroSection";
 import DigitalAdvisory from "@/components/sections/DigitalAdvisory";
 import BookAppointment from "@/components/sections/BookAppointment";
+
+import DollIcon from "@/assets/doll.svg";
 const Page = () => {
   return (
     <div className="bg-dark-gray">
@@ -21,6 +23,9 @@ const Page = () => {
       <DigitalAdvisory />
       <BookAppointment />
       <Footer textColor="light-green" />
+      <div className="fixed lg:left-32 left-7 lg:bottom-0 bottom-0">
+        <DollIcon />
+      </div>
     </div>
   );
 };

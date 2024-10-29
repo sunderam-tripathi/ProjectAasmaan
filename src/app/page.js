@@ -1,10 +1,11 @@
+import React from "react";
+
 import ProductSearchBar from "@/components/forms/ProductSearchBar";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import SubNavigation from "@/components/layout/SubNavigation";
 import ProductsGrid from "@/components/sections/ProductsGrid";
 import PromotionSection from "@/components/sections/PromotionSection";
-import React from "react";
 
 export default function Home() {
   const products = [

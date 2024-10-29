@@ -87,6 +87,36 @@ const BookAppointment = () => {
                 ]}
               />
             </div>
+            {/* Right Section: Calendar - Mobile */}
+            <div className="w-full lg:hidden block lg:w-1/3 bg-gray-50 p-6 py-8">
+              <div className="flex justify-between px-8 py-0">
+                <button className="text-xl">&lt;</button>
+                <div className="text-center">
+                  <p>September, 2023</p>
+                </div>
+                <button className="text-xl">&gt;</button>
+              </div>
+              {/* Calendar Grid */}
+              <div className="px-8 py-8">
+                <div className="grid grid-cols-7 gap-2">
+                  {["S", "M", "T", "W", "T", "F", "S"].map((day, index) => (
+                    <div key={index} className="text-center font-bold">
+                      {day}
+                    </div>
+                  ))}
+                  {[...Array(30)].map((_, index) => (
+                    <div
+                      key={index}
+                      className={`text-center border ${
+                        index + 1 === 8 ? "bg-light-green" : ""
+                      }`}
+                    >
+                      {index + 1}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
             {/* Time Slots */}
             <div className="flex flex-wrap gap-4 lg:gap-20 mb-6 text-center justify-center mt-12 px-0 lg:px-8">
               {timeSlots.map((slot, index) => (
@@ -133,7 +163,7 @@ const BookAppointment = () => {
           </div>
 
           {/* Right Section: Calendar */}
-          <div className="w-full lg:w-1/3 bg-gray-50 p-6 py-16">
+          <div className="w-full hidden lg:block lg:w-1/3 bg-gray-50 p-6 py-16">
             <div className="flex justify-between px-8 py-0">
               <button className="text-xl">&lt;</button>
               <div className="text-center">

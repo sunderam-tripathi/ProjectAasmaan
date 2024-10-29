@@ -1,0 +1,6 @@
+<svg id="Component_7_2" data-name="Component 7 – 2" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <path id="Rectangle_57" data-name="Rectangle 57" d="M0,0H63A32,32,0,0,1,95,32V79A16,16,0,0,1,79,95H32A32,32,0,0,1,0,63V0A0,0,0,0,1,0,0Z" transform="translate(67.175) rotate(45)" fill="#56ff1b"/>
+  <path id="Line_4" data-name="Line 4" d="M0,39a2,2,0,0,1-2-2V0A2,2,0,0,1,0-2,2,2,0,0,1,2,0V37A2,2,0,0,1,0,39Z" transform="translate(67.175 30.175)"/>
+  <path id="Line_5" data-name="Line 5" d="M0,26a1.994,1.994,0,0,1-1.414-.586,2,2,0,0,1,0-2.828l24-24a2,2,0,0,1,2.828,0,2,2,0,0,1,0,2.828l-24,24A1.994,1.994,0,0,1,0,26Z" transform="translate(42.85 30.5)"/>
+  <path id="Line_6" data-name="Line 6" d="M24,26a1.994,1.994,0,0,1-1.414-.586l-24-24a2,2,0,0,1,0-2.828,2,2,0,0,1,2.828,0l24,24A2,2,0,0,1,24,26Z" transform="translate(67.5 30.501)"/>
+</svg>
